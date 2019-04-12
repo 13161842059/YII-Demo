@@ -1,5 +1,8 @@
 <?php
-//main-local文件 git自动忽略  本地修改
+//main-local-test文件 git自动忽略  本地修改成main-local
+/**
+*配置文件都写在这里，包括MYSQL,REDIS......
+*/
 $config = [ 
         'components' => [ 
                 'request' => [
