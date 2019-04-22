@@ -47,6 +47,6 @@
 **基于yii2框架的项目笔记**
    * 打印原生SQL：echo $query->createCommand()->getRawSql();
    * 将models层拆分为三层：service（业务层），bo（数据对象/处理层），dao（持久化层）
-   * migrate自动化建表
-    * ./yii migrate/create  update_admin  
-    * 'content' => $this->getDb()->getSchema()->createColumnSchemaBuilder('longtext')->comment('答题详情'),
+   * migrate自动化建表 
+       * ./yii migrate/create  update_admin  
+       * 'content' => $this->getDb()->getSchema()->createColumnSchemaBuilder('longtext')->comment('答题详情'),
