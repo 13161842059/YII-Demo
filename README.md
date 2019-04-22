@@ -39,7 +39,14 @@
    除此之外yii2中所有核心组件也都能正常使用，建议在重新划定的层级中使用，
    以便业务的解耦和业务的内聚，后期会加入自定义日志和自动生成文档功能_
    
-   php.ini中配置参考
-   sld.RUN_MODE = dev/test/prod
-   sld.DEBUG = true
-   分别对应开发，测试和线上环境，注意prod模式下debug为false
+   * php.ini中配置参考
+   * sld.RUN_MODE = dev/test/prod
+   * sld.DEBUG = true
+   * 分别对应开发，测试和线上环境，注意prod模式下debug为false
+
+**基于yii2框架的项目笔记**
+   * 打印原生SQL：echo $query->createCommand()->getRawSql();
+   * 将models层拆分为三层：service（业务层），bo（数据对象/处理层），dao（持久化层）
+   * migrate自动化建表
+    * ./yii migrate/create  update_admin  
+    * 'content' => $this->getDb()->getSchema()->createColumnSchemaBuilder('longtext')->comment('答题详情'),
